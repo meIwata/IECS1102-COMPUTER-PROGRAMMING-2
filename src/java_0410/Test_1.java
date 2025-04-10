@@ -15,22 +15,39 @@ public class Test_1 {
             }
 
             num = sc.nextInt();
+            int gradeCategory = -1; // 代表成績類別：-1 代表無效輸入，其他代表有效類別
+
             if (num >= 90 && num <= 100) {
-                System.out.println("A");
+                gradeCategory = 1; // A
             } else if (num >= 80 && num < 90) {
-                System.out.println("B");
-
+                gradeCategory = 2; // B
             } else if (num >= 70 && num < 80) {
-                System.out.println("C");
-
+                gradeCategory = 3; // C
             } else if (num >= 60 && num < 70) {
-                System.out.println("D");
-
+                gradeCategory = 4; // D
             } else if (num >= 0 && num < 60) {
-                System.out.println("F");
+                gradeCategory = 5; // F
+            }
 
-            } else {
-                System.out.print("輸入錯誤，");
+            // 使用 switch case 來判斷
+            switch (gradeCategory) {
+                case 1:
+                    System.out.println("A");
+                    break;
+                case 2:
+                    System.out.println("B");
+                    break;
+                case 3:
+                    System.out.println("C");
+                    break;
+                case 4:
+                    System.out.println("D");
+                    break;
+                case 5:
+                    System.out.println("F");
+                    break;
+                default:
+                    System.out.print("輸入錯誤，");
             }
         } while (num < 0 || num > 100);
         sc.close();
