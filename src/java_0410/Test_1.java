@@ -13,7 +13,9 @@ public class Test_1 {
                 System.out.print("輸入錯誤，請重新輸入: ");
                 sc.next();
             }
+
             num = sc.nextInt();
+
             int gradeCategory = -1; // 代表成績類別：-1 代表無效輸入，其他代表有效類別
 
             if (num >= 90 && num <= 100) {
