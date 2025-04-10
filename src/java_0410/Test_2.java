@@ -13,5 +13,9 @@ public class Test_2 {
         int div3=(int)num; // 強制轉型
         System.out.println(div3);
 
+        // double > int > short > byte
+        double a = 10;
+        short b = (short) 1.0;
+        System.out.println(b);
     }
 }
