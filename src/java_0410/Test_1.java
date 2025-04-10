@@ -4,12 +4,17 @@ import java.util.Scanner;
 
 public class Test_1 {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-        while(true){
+        while (true) {
             System.out.print("請輸入成績: ");
-            int num = sc.nextInt();
 
+            // 如果不是整數就提示並跳過
+            while (!sc.hasNextInt()) {
+                System.out.print("輸入錯誤，請重新輸入: ");
+                sc.next();
+            }
+
+            int num = sc.nextInt();
             if (num >= 90 && num <= 100) {
                 System.out.println("A");
                 break;
@@ -26,7 +31,7 @@ public class Test_1 {
                 System.out.println("F");
                 break;
             } else{
-                System.out.println("輸入錯誤，請重新輸入!");
+                System.out.print("輸入錯誤，");
             }
         }
         sc.close();
