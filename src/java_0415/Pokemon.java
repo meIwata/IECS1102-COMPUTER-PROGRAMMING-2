@@ -9,13 +9,27 @@ public class Pokemon {
 
     //成員方法
     void powerUp() {
-        cp = cp + 10;
-        candy = candy - 5;
+        if (candy >= 5) {
+//            cp = cp + 10;
+            cp += 10;
+//            candy = candy - 5;
+            candy -= 5;
+        } else {
+            System.out.println("現有糖果: " + candy + "，糖果不足5顆！，不可以升級！");
+        }
+
     }
 
     void evolve() {
-        cp = cp + 50;
-        candy = candy - 15;
+        if (candy >= 15) {
+//            cp = cp + 50;
+            cp += 50;
+//            candy = candy - 15;
+            candy -= 15;
+        } else {
+            System.out.println("現有糖果: " + candy + "，糖果不足15顆！，不可以進化！");
+        }
+
     }
 
     void printInfo() {
