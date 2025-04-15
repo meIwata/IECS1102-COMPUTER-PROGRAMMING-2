@@ -13,14 +13,14 @@ public class TestPokemon {
         duck.evolve();
         duck.printInfo();
 
-        System.out.println("--------------------");
-        Pokemon fog = new Pokemon();
-        fog.name = "妙蛙種子";
-        fog.cp = 50;
-        fog.hp = 80;
-        fog.candy = 100;
-        fog.printInfo();
-        fog.evolve();
-        fog.printInfo();
+        System.out.println("------------------------------------------");
+        Pokemon frog = new Pokemon();
+        frog.name = "妙蛙種子";
+        frog.cp = 50;
+        frog.hp = 80;
+        frog.candy = 100;
+        frog.printInfo();
+        frog.evolve();
+        frog.printInfo();
     }
 }

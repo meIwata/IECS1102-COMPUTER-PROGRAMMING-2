@@ -1,11 +1,13 @@
 package java_0415;
 
 public class Pokemon {
+    //成員變數
     String name;
     int cp;
     int hp;
     int candy;
 
+    //成員方法
     void powerUp() {
         cp = cp + 10;
         candy = candy - 5;
