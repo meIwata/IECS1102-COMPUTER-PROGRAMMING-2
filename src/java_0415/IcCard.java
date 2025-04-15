@@ -2,11 +2,12 @@ package java_0415;
 
 public class IcCard {
     // 屬性
+    // 成員變數
     String number;
     int balance = 0; // 悠遊卡餘額
 
-    // 方法
-    int add(int money){
+    // (成員)方法
+    int add(int money){ //(int money)參數列
         balance = balance + money;
         return balance;
     }

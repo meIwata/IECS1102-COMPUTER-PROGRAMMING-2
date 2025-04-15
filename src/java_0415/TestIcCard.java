@@ -5,10 +5,13 @@ public class TestIcCard {
       IcCard myCard = new IcCard(); // 前面要寫型別，生成物件的型別就是類別，myCard是屬於IcCard型別
         myCard.number="C1234";
         myCard.balance=100;
+        int a = myCard.balance; //存值
+      System.out.println(a); //取值
         myCard.printInfo();
 
         // 使用方法儲值
-        myCard.add(100); //儲值100
+        int result = myCard.add(100); //儲值100
+        System.out.println(result);
         myCard.printInfo(); //印出餘額
 
 
