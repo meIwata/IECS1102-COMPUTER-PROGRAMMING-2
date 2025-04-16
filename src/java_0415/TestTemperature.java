@@ -9,5 +9,11 @@ public class TestTemperature {
         Temperature F = new Temperature();
         F.Fahrenheit = 90;
         F.fahToCel();
+
+        System.out.println("-----------------------------------------");
+
+        Temperature temp = new Temperature();
+        System.out.println("華氏: " + temp.Fahrenheit(20.2f));
+        System.out.printf("攝氏: %.2f\n", temp.Celsius(90));
     }
 }
