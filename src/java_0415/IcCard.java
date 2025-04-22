@@ -7,7 +7,7 @@ public class IcCard {
     public int balance = 0; // 悠遊卡餘額
 
     // (成員)方法
-    int add(int money){ //(int money)參數列
+    public int add(int money) { //(int money)參數列
         balance = balance + money;
         return balance;
     }
@@ -17,12 +17,33 @@ public class IcCard {
 //        balance = balance + money;
 //    }
 
-    int pay(int money){
+    public int pay(int money) {
         balance = balance - money;
         return balance;
     }
 
-    public void printInfo(){ //()沒有放參數，且不需要回傳值
+    public boolean topup(int money) {
+        if (money < 0) {
+            return false;
+        } else {
+            balance = balance + money;
+            return true;
+        }
+    }
+
+    public boolean expense(int money) {
+        if (money > balance || money < 0) {
+            return false;
+
+        } else {
+            balance = balance - money;
+            return true;
+        }
+    }
+
+
+    public void printInfo() { //()沒有放參數，且不需要回傳值
         System.out.println("卡號: " + number + " 餘額: " + balance);
+        return;
     }
 }

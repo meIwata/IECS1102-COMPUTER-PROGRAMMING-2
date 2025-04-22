@@ -48,6 +48,7 @@ public class Test_01 {
         System.out.print("yourCard ");
         yourCard.printInfo();
 
+        myCard = null; // 設定成null就沒有指到任何物件 (NullPointerException)
 
     }
 }
