@@ -23,6 +23,6 @@ public class IcCard {
     }
 
     public void printInfo(){ //()沒有放參數，且不需要回傳值
-        System.out.println("卡號: " + number + "餘額: " + balance);
+        System.out.println("卡號: " + number + " 餘額: " + balance);
     }
 }
