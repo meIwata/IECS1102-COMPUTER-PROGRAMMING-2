@@ -10,4 +10,14 @@ public class Animal {
     void sleep() {
         System.out.println(name + " 在睡覺");
     }
+
+    /*兩種顯示方法*/
+    void action1(String actionName) {
+        System.out.println(name + " 現在在 " + actionName);
+    }
+
+    String action2(String actionName) {
+        return name + " 現在在 " + actionName;
+    }
+
 }

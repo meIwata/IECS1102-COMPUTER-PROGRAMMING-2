@@ -1,6 +1,6 @@
 package java_0423;
 
-public class Dog extends AbstractFourLeggedAnimal implements  Walkable, Performable{
+public class Dog extends AbstractFourLeggedAnimal implements Walkable, Performable {
     Dog(String name) {
         super(name);
     }
@@ -32,7 +32,7 @@ public class Dog extends AbstractFourLeggedAnimal implements  Walkable, Performa
     }
 
     @Override
-    public void perform(){
+    public void perform() {
         System.out.println(name + " 在表演跳火圈！");
     }
 }
