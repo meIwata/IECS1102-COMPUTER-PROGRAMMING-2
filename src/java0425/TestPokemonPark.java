@@ -20,12 +20,12 @@ public class TestPokemonPark {
 
     // !!! 有名字(pokemons2)的陣列 !!!
     Pokemon[] pokemons2 = {new Pokemon(), new Pokemon()};
-    int[] numbers = {1, 2, 3, 4, 5,};
+    int[] numbers = {1, 2, 3, 4, 5};
 
     PokemonPark park = new PokemonPark();
 
-//        park.countPokemons(pokemons);
-//        park.countPokemons(pokemons2);
+    // park.countPokemons(pokemons);
+    // park.countPokemons(pokemons2);
 
     // !!! 匿名陣列，課本8-3-5 !!!
     park.countPokemons(new Pokemon[]{new Pokemon(), new Pokemon()});
