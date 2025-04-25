@@ -1,0 +1,25 @@
+package java0415;
+
+public class TestPokemon {
+    public static void main(String[] args) {
+        Pokemon duck = new Pokemon();
+        duck.name = "可達鴨";
+        duck.cp = 100;
+        duck.hp = 200;
+        duck.candy = 4;
+        duck.printInfo();
+        duck.powerUp();
+        duck.printInfo();
+
+
+        System.out.println("------------------------------------------");
+        Pokemon frog = new Pokemon();
+        frog.name = "妙蛙種子";
+        frog.cp = 50;
+        frog.hp = 80;
+        frog.candy = 14;
+        frog.printInfo();
+        frog.evolve();
+        frog.printInfo();
+    }
+}
