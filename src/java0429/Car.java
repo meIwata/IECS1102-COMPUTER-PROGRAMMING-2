@@ -17,7 +17,7 @@ public class Car {
 
     // 有參數建構方法
     Car(String carNumber, String color, int doors, int seats){
-        this.carNumber = carNumber; // this.carNumber 指的是上面的成員變數
+        this.carNumber = carNumber; // this.carNumber 指的是上面的成員變數，後面的carNumber指的是建構方法裡面的參數
         this.color = color;
         this.doors = doors;
         this.seats = seats;
