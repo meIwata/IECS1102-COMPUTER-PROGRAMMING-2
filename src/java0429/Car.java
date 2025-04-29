@@ -7,7 +7,11 @@ public class Car {
     int seats; // 預設值: 0
 
     Car(){ // 系統預設的無參數的建構方法
-
+        // 由開發定義初始值
+        carNumber = "ABC-8888";
+        color = "white";
+        doors = 4;
+        seats = 5;
     }
 
     void drive(){
