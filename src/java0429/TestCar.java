@@ -10,9 +10,13 @@ public class TestCar {
         Car bmw = new Car("BBB-1234", "black", 5, 7);
         bmw.printCar();
 
-        Car mini = new Car("CCC-6666", "darkgreen");
-        mini.printCar();
+        Car mercedes = new Car("CCC-6666", "red");
+        mercedes.printCar();
 
+        // 使用Car預設方法再去改
+        Car benz = new Car();
+        benz.carNumber = "ZZZ-2222";
+        benz.color = "yellow";
     }
 
 }

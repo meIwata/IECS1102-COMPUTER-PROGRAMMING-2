@@ -33,6 +33,13 @@ public class Car {
         seats = 5;
     }
 
+    // 精靈產生: 右鍵 → Generate → Constructor
+    Car(int doors, String color, String carNumber) {
+        this.doors = doors;
+        this.color = color;
+        this.carNumber = carNumber;
+    }
+
     void drive(){
 
     }
