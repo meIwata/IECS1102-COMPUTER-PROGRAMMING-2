@@ -2,6 +2,11 @@ package java0429;
 
 public class Car {
     // 成員變數
+
+    // static 靜態共享成員變數
+    public static final int wheels = 4; // 加上static綁定在類別上，使用類別名稱做存取
+
+    // 封裝成員變數
     private String carNumber; // 預設值: null
     private String color; // 預設值: null
     private int doors; // 預設值: 0
@@ -96,5 +101,20 @@ public class Car {
 
     public void setSeats(int seats) {
         this.seats = seats;
+        recordInvocation("設定座椅");
+    }
+    private  void recordInvocation(String action){
+        System.out.println("現在的活動: " + action);
+    }
+
+    // 精靈產生: 右鍵 → Generate → toString()
+    @Override
+    public String toString() {
+        return "Car{" +
+                "carNumber='" + carNumber + '\'' +
+                ", color='" + color + '\'' +
+                ", doors=" + doors +
+                ", seats=" + seats +
+                '}';
     }
 }
