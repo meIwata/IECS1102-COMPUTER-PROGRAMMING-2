@@ -16,7 +16,7 @@ public class Calculator {
         return x + y + z;
     }
 
-    int add(int x, String y) {
+    static int add(int x, String y) {
         return x + Integer.parseInt(y);
     }
 
