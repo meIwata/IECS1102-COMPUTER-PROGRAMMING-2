@@ -64,7 +64,37 @@ public class Car {
             this.doors = doors;
             System.out.print("符合條件，讓你更改。");
         } else {
-            System.out.print("不給更改，維持出廠預設值：");
+            System.out.print("不給更改，維持出廠預設值 ");
         }
+    }
+
+    // 精靈產生: 右鍵 → Generate → Getter & Setter
+    public String getCarNumber() {
+        return carNumber;
+    }
+
+    public void setCarNumber(String carNumber) {
+        if (carNumber.length() == 8) {
+            this.carNumber = carNumber;
+            System.out.print("符合條件，讓你更改。");
+        } else {
+            System.out.print("車牌號碼有誤！不給更改。維持出廠預設值 ");
+        }
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getSeats() {
+        return seats;
+    }
+
+    public void setSeats(int seats) {
+        this.seats = seats;
     }
 }
