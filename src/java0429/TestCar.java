@@ -9,6 +9,10 @@ public class TestCar {
         // 使用者自行輸入參數
         Car bmw = new Car("BBB-1234", "black", 5, 7);
         bmw.printCar();
+
+        Car mini = new Car("CCC-6666", "darkgreen");
+        mini.printCar();
+
     }
 
 }

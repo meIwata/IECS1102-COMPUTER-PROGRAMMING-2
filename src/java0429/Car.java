@@ -23,6 +23,16 @@ public class Car {
         this.seats = seats;
     }
 
+    Car(String carNumber, String color){
+        // 讓使用者初始化車牌、顏色
+        this.carNumber = carNumber;
+        this.color = color;
+
+        // Car的開發者指定doors 4, seats 5
+        doors = 4; // 這裡沒有區域變數跟他同名，可以不用this.
+        seats = 5;
+    }
+
     void drive(){
 
     }
@@ -32,6 +42,6 @@ public class Car {
     }
 
     void printCar(){
-        System.out.println(carNumber + ";" + color + ";" + doors + ";" + seats);
+        System.out.println(carNumber + " ;" + color + " ;" + doors + " ;" + seats);
     }
 }
