@@ -18,6 +18,7 @@ public class TestCar {
         Car benz = new Car();
 //        benz.carNumber = "ZZZ-2222";
 //        benz.color = "yellow";
+        // 如果更改的條件不符合範圍，會給預設值
         benz.setDoors(2);
         System.out.println("benz的門: " + benz.getDoors());
     }
