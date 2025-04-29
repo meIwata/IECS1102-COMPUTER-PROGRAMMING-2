@@ -10,6 +10,5 @@ public class TestPokemon {
 
         Pokemon three = new Pokemon("妙蛙種子", 100);
         three.printPokemon();
-
     }
 }

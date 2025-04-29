@@ -11,6 +11,7 @@ public class Pokemon {
 
     // 定義建構方法 1
     // 沒有參數
+    // 給定預設值 或 都不給
     Pokemon() {
         this.name = "神奇寶貝";
         this.cp = 20;
@@ -21,10 +22,10 @@ public class Pokemon {
     // 定義建構方法 2
     // 讓呼叫者對所有成員變數指定初始值
     Pokemon(String name, int cp, int hp, int candy) {
-        this.candy = candy;
-        this.hp = hp;
-        this.cp = cp;
         this.name = name;
+        this.cp = cp;
+        this.hp = hp;
+        this.candy = candy;
     }
 
     // 定義建構方法 3
