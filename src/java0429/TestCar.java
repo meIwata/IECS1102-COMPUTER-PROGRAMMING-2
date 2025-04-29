@@ -14,9 +14,11 @@ public class TestCar {
         mercedes.printCar();
 
         // 使用Car預設方法再去改
+        // 成員變數封裝private後 就不能直接存取資料
         Car benz = new Car();
-        benz.carNumber = "ZZZ-2222";
-        benz.color = "yellow";
+//        benz.carNumber = "ZZZ-2222";
+//        benz.color = "yellow";
+        benz.setDoors(2);
+        System.out.println("benz的門: " + benz.getDoors());
     }
-
 }
