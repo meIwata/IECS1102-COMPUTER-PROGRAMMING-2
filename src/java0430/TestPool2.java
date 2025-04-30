@@ -2,7 +2,8 @@ package java0430;
 
 class Pool2 {
     // 封裝成 private，提供 getQty()
-    private int qty;
+//    private int qty;
+    private static int qty;
 
     public int getQty() {
         return qty;
@@ -13,12 +14,14 @@ class Pool2 {
         this.qty = qty;
     }
 
-    void addWater() {
+//    void addWater() {
+    static void addWater() {
         qty += 3;
         System.out.println("進行加水，目前水池水量: " + qty);
     }
 
-    void deductWater() {
+//    void deductWater() {
+    static void deductWater() {
         if (qty >= 2) {
             qty -= 2;
             System.out.println("進行減水，目前水池水量: " + qty);
@@ -32,16 +35,27 @@ public class TestPool2 {
     public static void main(String[] args) {
         Pool2 pool2 = new Pool2(10);
         System.out.println("水池初始水量: " + pool2.getQty());
-        pool2.addWater();
-        pool2.addWater();
-        pool2.deductWater();
-        pool2.deductWater();
-        pool2.deductWater();
-        pool2.deductWater();
-        pool2.deductWater();
-        pool2.deductWater();
-        pool2.deductWater();
-        pool2.deductWater();
-        pool2.deductWater();
+//        pool2.addWater();
+//        pool2.addWater();
+//        pool2.deductWater();
+//        pool2.deductWater();
+//        pool2.deductWater();
+//        pool2.deductWater();
+//        pool2.deductWater();
+//        pool2.deductWater();
+//        pool2.deductWater();
+//        pool2.deductWater();
+//        pool2.deductWater();
+        Pool2.addWater();
+        Pool2.addWater();
+        Pool2.deductWater();
+        Pool2.deductWater();
+        Pool2.deductWater();
+        Pool2.deductWater();
+        Pool2.deductWater();
+        Pool2.deductWater();
+        Pool2.deductWater();
+        Pool2.deductWater();
+        Pool2.deductWater();
     }
 }
