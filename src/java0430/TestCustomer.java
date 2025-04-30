@@ -8,7 +8,7 @@ class Customer {
         this.name = name;
         count++;
     }
-    static void printInfo(Customer customer){
+    static void printInfo(Customer customer){ // 必須要加上static，底下的main才能取用
         // 打印客户信息
         System.out.println(customer.name + "是今天第: " + Customer.count + "個客戶");
     }
@@ -18,7 +18,7 @@ public class TestCustomer {
     public static void main(String[] args) {
         Customer c1 = new Customer("小李");
 //        System.out.println(c1.name + "是今天第: " + Customer.count + "個客戶");
-        Customer.printInfo(c1);
+        Customer.printInfo(c1); // 利用靜態方法呼叫
 
 
         Customer c2 = new Customer("小明");
