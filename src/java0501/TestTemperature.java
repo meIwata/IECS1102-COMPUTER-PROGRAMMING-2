@@ -12,6 +12,31 @@ public class TestTemperature {
 
         System.out.println(Temperature.toC(100));
 
+        // 絕對值方法
+        int absValue = Math.abs(-10);
+        System.out.println(absValue);
+
+        // 無條件捨去
+        double value1 = Math.floor(5.8);
+        System.out.println(value1);
+
+        // 無條件進位
+        double value2 = Math.ceil(5.8);
+        System.out.println(value2);
+
+        // 四捨五入
+        double value3 = Math.round(5.8);
+        System.out.println(value3);
+
+        double value4 = Math.max(10, 2);
+        System.out.println(value4);
+
+        double value5 = Math.min(10, 2);
+        System.out.println(value5);
+
+        double value6 = Math.random()*100;
+        System.out.println(value6);
+
     }
 
 

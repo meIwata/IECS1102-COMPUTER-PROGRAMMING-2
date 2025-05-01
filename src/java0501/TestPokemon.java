@@ -5,7 +5,9 @@ public class TestPokemon {
         // ⚠️重點⚠️ 一般方法是綁在物件上，所以需透過創出實體物件(one)去呼叫
         Pokemon one = new Pokemon();
         one.setName("皮卡丘");
-        one.setCp(10);
+//        one.setCp(10);
+//        System.out.println(one.generateCpValue());
+        one.setCp(one.generateCpValue());
         one.setHp(20);
         one.setCandy(50);
         System.out.println(one.toString());
@@ -18,5 +20,9 @@ public class TestPokemon {
 
 //        int o = Pokemon.ONE;
 //        System.out.println(o);
+
+        Pokemon two = new Pokemon();
+        two.setName("可達鴨");
+        System.out.println(two.toString()); // cp值隨機產生
     }
 }

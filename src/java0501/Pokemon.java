@@ -16,7 +16,7 @@ public class Pokemon {
     // 定義建構方法 1 public
     // 沒有參數
     Pokemon() {
-
+        cp = generateCpValue(); // cp 值為隨機
     }
 
     // 定義建構方法 2 public
@@ -101,5 +101,14 @@ public class Pokemon {
                 ", hp=" + hp +
                 ", candy=" + candy +
                 '}';
+    }
+
+    // 隨機產生50-100的CP值
+    int generateCpValue() {
+        double ranndomValue = Math.random(); //0.0~1.0 不包含1.0
+        ranndomValue = ranndomValue * 51; // 0.0~49.999999....
+        int cpValue = (int) ranndomValue; // 強制轉型， 0~49
+        cpValue = cpValue + 50;
+        return cpValue; // 回傳cp value
     }
 }
