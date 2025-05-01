@@ -16,6 +16,7 @@ public class TestPokemon {
         // ⚠️重點⚠️ 靜態方法可以用類別(Pokemon)做呼叫
         Pokemon.printString("Hello FCU");
 
-
+//        int o = Pokemon.ONE;
+//        System.out.println(o);
     }
 }
