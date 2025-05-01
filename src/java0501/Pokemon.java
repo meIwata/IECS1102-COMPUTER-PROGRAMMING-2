@@ -12,16 +12,17 @@ public class Pokemon {
 
     // 定義建構方法 1 public
     // 沒有參數
-    Pokemon(){
+    Pokemon() {
 
     }
+
     // 定義建構方法 2 public
     // 讓呼叫者對所有成員變數指定初始值
-    Pokemon(String name, int cp, int hp, int candy){
-            this.name = name;
-            this.cp = cp;
-            this.hp = hp;
-            this.candy = candy;
+    Pokemon(String name, int cp, int hp, int candy) {
+        this.name = name;
+        this.cp = cp;
+        this.hp = hp;
+        this.candy = candy;
     }
 
     // 定義每一個成員變數的Getter & Setter方法
@@ -40,7 +41,12 @@ public class Pokemon {
     }
 
     public void setCp(int cp) {
-        this.cp = cp;
+        if (cp >= 0) {
+            this.cp = cp;
+        } else {
+            System.out.println("輸入值需大於0");
+        }
+
     }
 
     public int getHp() {
@@ -48,7 +54,11 @@ public class Pokemon {
     }
 
     public void setHp(int hp) {
-        this.hp = hp;
+        if (hp >= 0) {
+            this.hp = hp;
+        } else {
+            System.out.println("輸入值需大於0");
+        }
     }
 
     public int getCandy() {
@@ -56,11 +66,19 @@ public class Pokemon {
     }
 
     public void setCandy(int candy) {
-        this.candy = candy;
+        if (candy >= 0) {
+            this.candy = candy;
+        } else {
+            System.out.println("輸入值需大於0");
+        }
     }
 
     // 定義一個static的printString(String input)方法
     // 印出所有輸入的字串
+    public static void printString(String input){
+        System.out.println(input);
+    }
+
     @Override
     public String toString() {
         return "Pokemon{" +
