@@ -28,7 +28,6 @@ public class TestLotteryGenerator {
 
             // 把數字放到陣列中
             numbers[i] = num;
-//            System.out.println(Arrays.toString(numbers));
         }
 
         // 印出
