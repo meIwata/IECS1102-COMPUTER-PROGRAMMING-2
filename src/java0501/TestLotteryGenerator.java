@@ -1,7 +1,5 @@
 package java0501;
 
-import java.util.Arrays;
-
 public class TestLotteryGenerator {
     public static void main(String[] args) {
 //        LotteryGenerator generator = new LotteryGenerator();

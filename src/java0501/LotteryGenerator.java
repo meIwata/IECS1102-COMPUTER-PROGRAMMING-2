@@ -1,7 +1,5 @@
 package java0501;
 
-import java.util.Arrays;
-
 public class LotteryGenerator {
     // 產生一個隨機整數 介於1~49之間
     static int generateNumber() {
