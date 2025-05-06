@@ -2,7 +2,7 @@ package java0506;
 
 import java.util.Scanner;
 
-public class TestString {
+public class TestString01 {
     public static void main(String[] args) {
 
         String str1 = "Hello FCU";
