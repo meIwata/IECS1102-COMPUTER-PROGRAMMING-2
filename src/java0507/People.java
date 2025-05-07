@@ -25,8 +25,8 @@ public class People {
     }
 
     public static void main(String[] args) {
-        People tom = new People("Tom", 22, "Male");
-        People lily = new People("Lily", 30, "Female");
+        People tom = new People("Tom", 22, "Male"); // People{name='Tom', age=22, gender='Male'}
+        People lily = new People("Lily", 30, "Female"); // People{name='Lily', age=30, gender='Female'}
         System.out.println(tom);
         System.out.println(lily);
     }
