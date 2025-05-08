@@ -11,6 +11,9 @@ public class TestPeople {
         mary.sleep(); //null正要去吃睡覺！
         /*使用的是空參數建構子，name的型別是String預設就是null*/
 
-
+        Student john = new Student("B123456789", "John", "D123456789");
+        john.sleep();
+        john.takeCourse();
+        john.joinParty();
     }
 }
