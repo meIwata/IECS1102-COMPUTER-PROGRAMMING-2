@@ -11,7 +11,7 @@ public class TestPeople {
         mary.eat(); // null正要去吃東西！
         mary.sleep(); //null正要去吃睡覺！
         /*使用的是空參數建構子，name的型別是String預設就是null*/
-        System.out.println("----------------------");
+        System.out.println("----------------");
 
         Student john = new Student("B123456789", "John", "D123456789");
         john.eat(); // Student裡面有個覆寫的方法
@@ -46,5 +46,10 @@ public class TestPeople {
         /*向下轉型 kelly原本是Person，現在變成MasterStudent，向下轉型有風險，可能會轉錯*/
         MasterStudent masterStudent = (MasterStudent) kelly;
         masterStudent.doResearch();
+
+        System.out.println("----------------");
+        Restaurant fcuRest = new Restaurant();
+        fcuRest.offeringLunch(tom);
+        fcuRest.offeringLunch(kelly); // kelly已經變成Student父類別，但因為原本子類別MasterStudent的void eat()已經覆寫了，所以會使用覆寫的方法
     }
 }
