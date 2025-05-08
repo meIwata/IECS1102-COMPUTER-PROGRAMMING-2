@@ -2,6 +2,7 @@ package java0508;
 
 import java.util.Date;
 
+// 父類別 Super class
 // 成員變數
 public class Person {
     private String id;

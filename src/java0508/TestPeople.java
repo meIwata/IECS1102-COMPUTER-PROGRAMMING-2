@@ -12,6 +12,7 @@ public class TestPeople {
         /*使用的是空參數建構子，name的型別是String預設就是null*/
 
         Student john = new Student("B123456789", "John", "D123456789");
+        john.eat();
         john.sleep();
         john.takeCourse();
         john.joinParty();
