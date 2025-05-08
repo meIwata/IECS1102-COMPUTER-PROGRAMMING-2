@@ -2,27 +2,27 @@ package java0508;
 
 import java.util.Date;
 
-// 成員變數
-public class Person {
+public class Student {
     private String id;
     private String name;
     private String password;
     private String email;
     private Date birthday;
     private String address;
+    /*以上跟class Person一樣*/
+    private String studentId;
+    private String school;
+    private String department;
 
-    // 空參數建構方法
-    public Person() {
-
+    public Student() {
     }
 
-    // 兩個參數id, name建構方法
-    public Person(String id, String name) {
+    public Student(String id, String name, String studentId) {
         this.id = id;
         this.name = name;
+        this.studentId = studentId;
     }
 
-    // 每個成員變數getter & setter方法
     public String getId() {
         return id;
     }
@@ -70,10 +70,40 @@ public class Person {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
+    }
+
+    public String getSchool() {
+        return school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
     public void eat(){
         System.out.println(name + "正要去吃東西！");
     }
     public void sleep(){
         System.out.println(name + "正要去吃睡覺！");
+    }
+    public void takeCourse(){
+        System.out.println(name + "正要去上課！");
+    }
+    public void joinParty(){
+        System.out.println(name + "正要去派對！");
     }
 }
