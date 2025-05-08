@@ -14,7 +14,6 @@ public class Person {
 
     // 空參數建構方法
     public Person() {
-
     }
 
     // 兩個參數id, name建構方法
