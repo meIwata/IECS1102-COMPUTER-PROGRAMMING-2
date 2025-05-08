@@ -17,7 +17,8 @@ public class Student extends Person {
     private String department;
 
     public Student() {
-        super(); // 呼叫父類別的空參數建構方法
+        super(); // 呼叫父類別的空參數建構方法，沒有寫super(); 也是會預設
+//        super("",""); // 如果父類別沒有空參數建構方法，但有兩個參數id, name建構方法，可以放兩個"",""傳入做初始化
     }
 
     public Student(String id, String name, String studentId) {
@@ -121,5 +122,18 @@ public class Student extends Person {
 
     public void joinParty(String name) {
         System.out.println(name + "正要去派對！");
+    }
+
+    // 註解: 覆寫，改寫父類別方法，用以下方法執行
+    @Override
+    public void eat() {
+        super.eat(); // 呼叫父類別來執行
+        System.out.println("學生" + getName() + "正在爆吃！！！！！！！");
+    }
+
+    @Override
+    public String getName() {
+        String name = "學生名字: " + super.getName();
+        return super.getName();
     }
 }

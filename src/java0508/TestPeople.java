@@ -7,12 +7,14 @@ public class TestPeople {
         tom.sleep();
 
         Person mary = new Person();
+//        Person mary = new Person("","");
         mary.eat(); // null正要去吃東西！
         mary.sleep(); //null正要去吃睡覺！
         /*使用的是空參數建構子，name的型別是String預設就是null*/
+        System.out.println("----------------------");
 
         Student john = new Student("B123456789", "John", "D123456789");
-        john.eat();
+        john.eat(); // Student裡面有個覆寫的方法
         john.sleep();
 
         // 第一種getName() 方法
@@ -22,5 +24,8 @@ public class TestPeople {
         // 第二種getName() 方法
         john.takeCourse(john.getName());
         john.joinParty(john.getName());
+
+
+        System.out.println(john.getName());
     }
 }
