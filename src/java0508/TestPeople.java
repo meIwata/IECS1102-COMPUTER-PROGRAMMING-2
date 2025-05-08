@@ -14,7 +14,13 @@ public class TestPeople {
         Student john = new Student("B123456789", "John", "D123456789");
         john.eat();
         john.sleep();
-        john.takeCourse();
-        john.joinParty();
+
+        // 第一種getName() 方法
+//        john.takeCourse();
+//        john.joinParty();
+
+        // 第二種getName() 方法
+        john.takeCourse(john.getName());
+        john.joinParty(john.getName());
     }
 }

@@ -3,7 +3,7 @@ package java0508;
 import java.util.Date;
 
 // 子類別 Sub class
-public class Student extends Person{
+public class Student extends Person {
 //    private String id;
 //    private String name;
 //    private String password;
@@ -104,10 +104,22 @@ public class Student extends Person{
 //    public void sleep(){
 //        System.out.println(name + "正要去吃睡覺！");
 //    }
-    public void takeCourse(){
-        System.out.println("正要去上課！");
+
+// 第一種getName() 方法
+//public void takeCourse(){
+//    System.out.println(getName() + "正要去上課！");
+//}
+//    public void joinParty(){
+//        System.out.println(getName() + "正要去派對！");
+//    }
+
+
+    // 第二種getName() 方法
+    public void takeCourse(String name) {
+        System.out.println(name + "正要去上課！");
     }
-    public void joinParty(){
-        System.out.println("正要去派對！");
+
+    public void joinParty(String name) {
+        System.out.println(name + "正要去派對！");
     }
 }
