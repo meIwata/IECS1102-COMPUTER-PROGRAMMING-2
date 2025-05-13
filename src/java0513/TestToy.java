@@ -1,34 +1,35 @@
 package java0513;
 
-class Dog {
+class Animal {
+    public void makeSound() {
+        System.out.println("動物發出叫聲");
+    }
+}
+
+class Dog extends Animal {
+    @Override
     public void makeSound() {
         System.out.println("汪汪");
     }
 }
 
-class Cat {
+class Cat extends Animal {
+    @Override
     public void makeSound() {
         System.out.println("喵喵");
     }
 }
 
-class Cow {
+class Cow extends Animal {
+    @Override
     public void makeSound() {
         System.out.println("哞哞");
     }
 }
 
 class Toy {
-    public void pressButton(Dog dog) {
-        dog.makeSound();
-    }
-
-    public void pressButton(Cat cat) {
-        cat.makeSound();
-    }
-
-    public void pressButton(Cow cow) {
-        cow.makeSound();
+    public void pressButton(Animal animal) {
+        animal.makeSound();
     }
 }
 

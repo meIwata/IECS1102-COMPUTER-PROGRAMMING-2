@@ -52,5 +52,10 @@ public class TestLand {
         Calculator ca = new Calculator(3000.0);
         System.out.println("c 這塊土地價值: " + ca.calculatorPrice(c));
         System.out.println("s 這塊土地價值: " + ca.calculatorPrice(s));
+
+
+        // 如果不要用double calculatorPrice(Land l){}方法，也可以這樣寫！
+        System.out.println("c 這塊土地價值: " + c.area() * ca.price);
+        System.out.println("s 這塊土地價值: " + s.area() * ca.price);
     }
 }
