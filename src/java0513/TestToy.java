@@ -27,6 +27,13 @@ class Cow extends Animal {
     }
 }
 
+class Duck extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("呱呱");
+    }
+}
+
 class Toy {
     public void pressButton(Animal animal) {
         animal.makeSound();
@@ -44,5 +51,8 @@ public class TestToy {
 
         Cow cow = new Cow();
         myToy.pressButton(cow);
+
+        Duck duck = new Duck();
+        myToy.pressButton(duck);
     }
 }
