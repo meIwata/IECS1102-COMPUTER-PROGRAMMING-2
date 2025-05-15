@@ -2,24 +2,39 @@ package jave0515;
 
 public class Pickachu {
     // 成員變數
-    String name;
-    int level;
-    int candy;
-    int attackPower;
-    int defencePower;
+    private String name;
+    private int level;
+    private int candy;
+    private int attackPower;
+    private int defencePower;
 
     public Pickachu(String name) {
         this.name = name;
-        candy = 0;
-        level = 4 + (int) (Math.random() * 3); // Math.random()=> 0~1
-        attackPower = 6 + (int) (Math.random() * 5);
-        defencePower = 1 + (int) (Math.random() * 5);
+        this.candy = 0;
+        this.level = 4 + (int) (Math.random() * 3); // 4~6
+        /*
+        *   Math.random() => 0~0.99
+        *   *3 = 0~2.999...
+        *   +4 = 4~6.999...
+        */
 
+        this.attackPower = 6 + (int) (Math.random() * 5); //6~10
+        /*
+         *  Math.random() => 0~0.99
+         *  *5 = 0~4.999...
+         *  +6 = 6~10.999...
+        */
+        this.defencePower = 1 + (int) (Math.random() * 5); //1~5
+        /*
+         *  Math.random() => 0~0.99
+         *  *5 = 0~4.999...
+         *  +1 = 1~5.999...
+        */
     }
 
     // 增加candy的數
     public void addCandy(int candy) {
-        candy += candy;
+        this.candy += candy;
     }
 
     // 增加attackPower
@@ -46,7 +61,7 @@ public class Pickachu {
 
     // 增加level
     // 花費20個candy可以增加1個level
-    public void powerUp() {
+    public void levelUp() {
         if (candy >= 20) {
             candy -= 20;
             level += 1;

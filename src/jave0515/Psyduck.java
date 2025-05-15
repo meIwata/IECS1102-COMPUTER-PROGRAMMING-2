@@ -2,25 +2,25 @@ package jave0515;
 
 public class Psyduck {
     // 成員變數
-    String name;
-    int level;
-    int candy;
-    int attackPower;
-    int defencePower;
+    private String name;
+    private int level;
+    private int candy;
+    private int attackPower;
+    private int defencePower;
 
     public Psyduck(String name) {
         this.name = name;
-        candy = 0;
-        level = 4 + (int) (Math.random() * 3); //4~6
-        attackPower = 1 + (int) (Math.random() * 5);
+        this.candy = 0;
+        this.level = 4 + (int) (Math.random() * 3); //4~6
+        this.attackPower = 1 + (int) (Math.random() * 5);
         ; //1~5
-        defencePower = 6 + (int) (Math.random() * 5); //6~10
+        this.defencePower = 6 + (int) (Math.random() * 5); //6~10
 
     }
 
     // 增加candy的數
     public void addCandy(int candy) {
-        candy += candy;
+        this.candy += candy;
     }
 
     // 增加attackPower
@@ -47,7 +47,7 @@ public class Psyduck {
 
     // 增加level
     // 花費20個candy可以增加1個level
-    public void powerUp() {
+    public void levelUp() {
         if (candy >= 20) {
             candy -= 20;
             level += 1;
@@ -87,5 +87,15 @@ public class Psyduck {
                 ", 攻擊力=" + attackPower +
                 ", 防禦力=" + defencePower +
                 '}');
+    }
+
+    public static void main(String[] args) {
+        Psyduck psyduck = new Psyduck("鴨賞");
+        psyduck.printInfo();
+        psyduck.addCandy(20);
+        psyduck.printInfo();
+        psyduck.increaseAttackPower();
+        psyduck.increaseDefencePower();
+        psyduck.printInfo();
     }
 }
