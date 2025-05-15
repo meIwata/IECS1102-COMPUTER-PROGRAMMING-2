@@ -8,6 +8,8 @@ public class Gym {
     // 3. 若2. 相同，則隨機選出一個贏家
     // 最後印出贏家的資訊
 
+    // H.W. 用隨機的方式傳入兩隻神奇寶貝對戰
+
     public static void fight(Pickachu pickachu, Bulbasaur bulbasaur) {
         if (pickachu.getLevel() > bulbasaur.getLevel()) {
             System.out.println(pickachu.getName() + "勝");
