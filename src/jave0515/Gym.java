@@ -10,18 +10,18 @@ public class Gym {
 
     // H.W. 用隨機的方式傳入兩隻神奇寶貝對戰
 
-    public static void fight(Pickachu pickachu, Bulbasaur bulbasaur) {
-        if (pickachu.getLevel() > bulbasaur.getLevel()) {
-            System.out.println(pickachu.getName() + "勝");
-        } else  {
-            System.out.println(bulbasaur.getName() + "勝");
+    public static void fight(Pokemon x, Pokemon y) {
+        if (x.getLevel() > y.getLevel()) {
+            System.out.println(x.getName() + "勝");
+        } else {
+            System.out.println(y.getName() + "勝");
         }
     }
 
     public static void main(String[] args) {
-        Pickachu pickachu = new Pickachu("皮卡丘");
-        Bulbasaur bulbasaur = new Bulbasaur("妙蛙種子");
-        fight(pickachu, bulbasaur);
+        Pokemon x = new Pickachu("皮卡丘");
+        Pokemon y = new Bulbasaur("妙蛙種子");
+        fight(x, y);
     }
 
 }
