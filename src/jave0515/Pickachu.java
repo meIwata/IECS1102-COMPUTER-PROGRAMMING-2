@@ -1,6 +1,6 @@
 package jave0515;
 
-class Pickachu {
+public class Pickachu {
     // 成員變數
     String name;
     int level;
@@ -19,7 +19,7 @@ class Pickachu {
 
     // 增加candy的數
     public void addCandy(int candy) {
-        candy += 1;
+        candy += candy;
     }
 
     // 增加attackPower
@@ -32,7 +32,6 @@ class Pickachu {
             System.out.println("糖果數不足");
         }
     }
-
 
     // 增加defencePower
     // 花費2個candy可以增加1個defencePower
@@ -77,9 +76,8 @@ class Pickachu {
     public int getDefencePower() {
         return defencePower;
     }
+
     // 印出所有成員變數得值
-
-
     public void printInfo() {
         System.out.println("Pickachu{" +
                 "姓名='" + name + '\'' +
@@ -91,10 +89,3 @@ class Pickachu {
     }
 }
 
-
-public class TestPickachu {
-    public static void main(String[] args) {
-        Pickachu one = new Pickachu("可達鴨");
-        one.printInfo();
-    }
-}
