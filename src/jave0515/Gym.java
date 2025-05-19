@@ -1,5 +1,7 @@
 package jave0515;
 
+import java.util.Random;
+
 public class Gym {
     // 傳入兩隻神起寶貝，讓其對戰
     // 贏家規則
@@ -13,15 +15,30 @@ public class Gym {
     public static void fight(Pokemon x, Pokemon y) {
         if (x.getLevel() > y.getLevel()) {
             System.out.println(x.getName() + "勝");
-        } else {
+        } else if (x.getLevel() < y.getLevel()) {
             System.out.println(y.getName() + "勝");
+        } else { // level 相同
+            int xPower = x.attackPower - x.defencePower;
+            int yPower = y.attackPower - y.defencePower;
+            if (xPower > yPower) {
+                System.out.println(x.getName() + "勝");
+            } else if (xPower < yPower) {
+                System.out.println(y.getName() + "勝");
+            } else {
+                // 隨機挑出 x 或 y
+                String[] chosenArray = {x.getName(), y.getName()};
+                Random random = new Random();
+                int index = random.nextInt(2); // 0 或 1
+                System.out.println(chosenArray[index] + "勝");
+            }
         }
     }
 
     public static void main(String[] args) {
         Pokemon x = new Pickachu("皮卡丘");
         Pokemon y = new Bulbasaur("妙蛙種子");
+        x.printInfo();
+        y.printInfo();
         fight(x, y);
     }
-
 }
