@@ -44,35 +44,60 @@ public class Gym {
 		}
 	}
 
+	/*
+		根據上方的規則，從多個輸入的pokemon物件中
+		找出贏家，並印出贏家資訊
+	*/
+	public void fight(Pokemon... pokemons) {
+//		for (int i = 0; i < pokemons.length; i++) {
+		for (Pokemon i : pokemons) {
+			System.out.println(i);
+		}
+	}
+
+
 	public static void main(String[] args) {
+//		Pokemon[] pokemons = new Pokemon[3];
+//		pokemons[0] = pickachu;
+//		pokemons[1] = psyduck;
+//		pokemons[2] = bulbasaur;
+		Pokemon pokemon = new Pickachu("皮皮");
+		Pokemon pokemon1 = new Psyduck("鴨鴨");
+		Pokemon pokemon2 = new Bulbasaur("蛙蛙");
 
-		/*補充==的用法*/
-		Pokemon p1 = new Pokemon("鴨頭", 10, 15, 20, 30);
-		Pokemon p2 = new Pokemon("鴨頭", 10, 15, 20, 30);
-		System.out.println(p1 == p2); // false，因為兩個是不一樣的物件
+		Gym G = new Gym();
+		G.fight(pokemon, pokemon1, pokemon2);
 
 
-        Pokemon x = new Pickachu("皮卡丘");
 
-        /*可以參考Java Api: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html*/
-        String toString = x.toString(); // 使用Object的toString方法
-        System.out.println(toString); // jave0515.Pickachu@4517d9a3，這是物件的識別號碼
-
-        x.addCandy(100);
-        x.levelUp();
-        x.increaseAttackPower();
-        x.increaseDefencePower();
-
-        Pokemon y = new Bulbasaur("妙蛙種子");
-        y.addCandy(100);
-        y.levelUp();
-        y.increaseAttackPower();
-        y.increaseDefencePower();
-
-        x.printInfo();
-        y.printInfo();
-        fight(x, y);
-
+//
+//		/*補充==的用法*/
+//		Pokemon p1 = new Pokemon("鴨頭", 10, 15, 20, 30);
+//		Pokemon p2 = new Pokemon("鴨頭", 10, 15, 20, 30);
+//		System.out.println(p1 == p2); // false，因為兩個是不一樣的物件
+//
+//
+//		Pokemon x = new Pickachu("皮卡丘");
+//
+//		/*可以參考Java Api: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html*/
+//		String toString = x.toString(); // 使用Object的toString方法
+//		System.out.println(toString); // jave0515.Pickachu@4517d9a3，這是物件的識別號碼
+//
+//		x.addCandy(100);
+//		x.levelUp();
+//		x.increaseAttackPower();
+//		x.increaseDefencePower();
+//
+//		Pokemon y = new Bulbasaur("妙蛙種子");
+//		y.addCandy(100);
+//		y.levelUp();
+//		y.increaseAttackPower();
+//		y.increaseDefencePower();
+//
+//		x.printInfo();
+//		y.printInfo();
+//		fight(x, y);
+//
 
 	}
 }
