@@ -30,13 +30,33 @@ public class Gym {
                 Random random = new Random();
                 int index = random.nextInt(2); // 0 或 1
                 System.out.println(chosenArray[index] + "勝");
+
+                // 老師的方法
+                /*
+                double random2 = Math.random();
+                if (random2 > 0.5) {
+                    System.out.println(x.getName()+ "勝");
+                }else{
+                    System.out.println(y.getName() + "勝");
+                }
+                */
             }
         }
     }
 
     public static void main(String[] args) {
         Pokemon x = new Pickachu("皮卡丘");
+        x.addCandy(100);
+        x.levelUp();
+        x.increaseAttackPower();
+        x.increaseDefencePower();
+
         Pokemon y = new Bulbasaur("妙蛙種子");
+        y.addCandy(100);
+        y.levelUp();
+        y.increaseAttackPower();
+        y.increaseDefencePower();
+
         x.printInfo();
         y.printInfo();
         fight(x, y);
