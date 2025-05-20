@@ -28,12 +28,12 @@ public class Gym {
                 // 隨機挑出 x 或 y
                 String[] chosenArray = {x.getName(), y.getName()};
                 Random random = new Random();
-                int index = random.nextInt(2); // 0 或 1
+                int index = random.nextInt(2); // 產生一個 0 或 1 的隨機整數
                 System.out.println(chosenArray[index] + "勝");
 
                 // 老師的方法
                 /*
-                double random2 = Math.random();
+                double random2 = Math.random(); // 0~1，不包含1
                 if (random2 > 0.5) {
                     System.out.println(x.getName()+ "勝");
                 }else{
