@@ -1,6 +1,6 @@
 package java0520;
 
-public class Student {
+public class Student extends Object {
 	private String name;
 	private String gender;
 	private int age;
@@ -57,5 +57,11 @@ public class Student {
 			}
 		}
 		return false;
+	}
+
+	// 覆寫toString()方法
+	@Override
+	public String toString() {
+		return "name=" + name + ", gender=" + gender + ", age=" + age;
 	}
 }
