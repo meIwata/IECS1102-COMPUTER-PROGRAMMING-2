@@ -49,11 +49,41 @@ public class Gym {
 		找出贏家，並印出贏家資訊
 	*/
 	public void fight(Pokemon... pokemons) {
-//		for (int i = 0; i < pokemons.length; i++) {
-		for (Pokemon i : pokemons) {
-//			System.out.println(i);
-			i.printInfo();
+		if (pokemons.length == 0) {
+			System.out.println("沒有對戰者");
+			return;
 		}
+		// 冒泡排序，讓最強的寶可夢冒到最後
+		for (int i = 0; i < pokemons.length - 1; i++) {
+			for (int j = 0; j < pokemons.length - 1 - i; j++) {
+				if (compare(pokemons[j], pokemons[j + 1]) < 0) {
+					// pokemons[j+1] 更強，交換
+					Pokemon temp = pokemons[j];
+					pokemons[j] = pokemons[j + 1];
+					pokemons[j + 1] = temp;
+				} else if (compare(pokemons[j], pokemons[j + 1]) == 0) {
+					// 平手，隨機決定要不要換
+					if (new java.util.Random().nextBoolean()) {
+						Pokemon temp = pokemons[j];
+						pokemons[j] = pokemons[j + 1];
+						pokemons[j + 1] = temp;
+					}
+				}
+			}
+		}
+		System.out.print("贏家資訊： ");
+		pokemons[pokemons.length - 1].printInfo();
+	}
+
+	// 返回 -1: a弱, 1: a強, 0:平手
+	private int compare(Pokemon a, Pokemon b) {
+		if (a.getLevel() > b.getLevel()) return 1;
+		if (a.getLevel() < b.getLevel()) return -1;
+		int aPower = a.attackPower - a.defencePower;
+		int bPower = b.attackPower - b.defencePower;
+		if (aPower > bPower) return 1;
+		if (aPower < bPower) return -1;
+		return 0;
 	}
 
 
