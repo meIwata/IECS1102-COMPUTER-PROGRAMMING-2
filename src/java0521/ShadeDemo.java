@@ -19,5 +19,6 @@ public class ShadeDemo {
         System.out.println(q instanceof Square); // false
         System.out.println(s instanceof Quadrangle); // true
 //        System.out.println(q instanceof Circle);
+
     }
 }
