@@ -51,7 +51,8 @@ public class Gym {
 	public void fight(Pokemon... pokemons) {
 //		for (int i = 0; i < pokemons.length; i++) {
 		for (Pokemon i : pokemons) {
-			System.out.println(i);
+//			System.out.println(i);
+			i.printInfo();
 		}
 	}
 
