@@ -9,17 +9,17 @@ public class Main {
 //        toy.pressButton(animal);
 
 
-        Cat cat = new Cat();
+        Cat cat = new Cat("有喜君");
         toy.pressButton(cat);
 
-        Dog dog = new Dog();
+        Dog dog = new Dog("小莉");
         toy.pressButton(dog);
 
 //        因為Cow類別有抽象方法，所以不能實作
 //        Cow cow = new Cow();
 //        cow.makeSound();
 
-        LittleCow littleCow = new LittleCow();
+        LittleCow littleCow = new LittleCow("乳牛");
         littleCow.makeSound();
     }
 }
