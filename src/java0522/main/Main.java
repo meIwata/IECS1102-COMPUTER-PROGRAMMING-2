@@ -6,5 +6,7 @@ public class Main {
     public static void main(java.lang.String[] args) {
         String str = new String();
         Book myBook = new Book();
+//        java0522.book.Book myBook = new java0522.book.Book();
     }
+
 }
