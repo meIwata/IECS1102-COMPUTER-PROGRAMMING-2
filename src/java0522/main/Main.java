@@ -1,8 +1,10 @@
-package java0522;
+package java0522.main;
+
+import java0522.book.Book;
 
 public class Main {
     public static void main(java.lang.String[] args) {
         String str = new String();
-        str.greeting("Tom");
+        Book myBook = new Book();
     }
 }

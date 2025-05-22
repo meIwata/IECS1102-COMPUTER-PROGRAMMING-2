@@ -1,4 +1,4 @@
-package java0522;
+package java0522.main;
 
 public class String {
     public void greeting(java.lang.String name){
