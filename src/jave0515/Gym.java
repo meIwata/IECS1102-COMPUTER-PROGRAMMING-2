@@ -177,6 +177,5 @@ public class Gym {
 //		y.printInfo();
 //		fight(x, y);
 //
-
     }
 }
