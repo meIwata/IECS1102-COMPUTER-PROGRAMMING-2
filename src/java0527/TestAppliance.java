@@ -118,6 +118,7 @@ class AsusMainBoard implements MainBoard {
     public void calculate() {
         if (cpu != null) { // 當cpu不是null
             // 透過pin1、pin107運算
+            System.out.println("華碩主機板在計算...");
             cpu.pin1();
             cpu.pin107();
         }
@@ -147,6 +148,7 @@ class GigabyteMainBoard implements MainBoard {
     public void calculate() {
         if (cpu != null) { // 當cpu不是null
             // 透過pin2、pin108運算
+            System.out.println("技嘉主機板在計算...");
             cpu.pin2();
             cpu.pin108();
         }
@@ -165,7 +167,8 @@ public class TestAppliance {
         asusBoard.installCpu(i9Cpu);
         asusBoard.calculate();
 
-        MainBoard gigabyteMainBoard = new GigabyteMainBoard();
+//        MainBoard gigabyteMainBoard = new GigabyteMainBoard();
+        GigabyteMainBoard gigabyteMainBoard = new GigabyteMainBoard();
         IntelCpu i5cpu = new I5cpu();
         gigabyteMainBoard.installCpu(i5cpu); // 把i5Cpu裝進去主機板
         gigabyteMainBoard.calculate();
