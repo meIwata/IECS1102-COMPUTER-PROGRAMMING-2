@@ -34,10 +34,13 @@ class Order {
 }
 
 interface Payment {
+    String LABEL = "支付"; // 以下是完整的修飾詞
+//public static final String LABEL ="支付";
+
     void pay(int amount);
 
     // 預設付款方法
-    default void cashPay(int amount){
+    default void cashPay(int amount) {
         System.out.println("使用現金支付了" + amount);
     }
 }
@@ -49,6 +52,7 @@ class LinePay implements Payment {
         System.out.println("使用LinePay支付了" + amount);
     }
 }
+
 class ApplePay implements Payment {
     @Override
     public void pay(int amount) {
@@ -76,5 +80,8 @@ public class TestPayment {
         // 沒有指定付款方式，預設現金
         Order order3 = new Order(300);
         order3.processOrder();
+
+//        Payment.LABEL = "測試修改";
+        System.out.println(Payment.LABEL);
     }
 }
