@@ -17,7 +17,7 @@ public class CardArray {
         System.out.println();
 
         // 增強型for迴圈
-        for(IcCard card: manyCards){
+        for (IcCard card : manyCards) {
             card.printInfo();
         }
     }
