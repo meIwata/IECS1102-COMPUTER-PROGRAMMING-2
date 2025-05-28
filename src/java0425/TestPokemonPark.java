@@ -23,12 +23,13 @@ public class TestPokemonPark {
     int[] numbers = {1, 2, 3, 4, 5};
 
     PokemonPark park = new PokemonPark();
-
-    // park.countPokemons(pokemons);
-    // park.countPokemons(pokemons2);
+     park.countPokemons(pokemons); // 寶可夢的數量: 3
+     park.countPokemons(pokemons2); // 寶可夢的數量: 2
 
     // !!! 匿名陣列，課本8-3-5 !!!
-    park.countPokemons(new Pokemon[]{new Pokemon(), new Pokemon()});
+    park.countPokemons(new Pokemon[]{new Pokemon(), new Pokemon()}); // 直接建立了一個Pokemon陣列，裡面有兩個Pokemon物件。{new Pokemon(), new Pokemon()})
+    // 寶可夢的數量: 2
+
 
   }
 }

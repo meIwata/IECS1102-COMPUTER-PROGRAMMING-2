@@ -8,7 +8,7 @@ public class Pokemon {
     int hp;
     int candy;
 
-    // 成員方法
+    // 有回傳值的成員方法
     int powerUp() {
         int cp = 50; //區域變數
         candy -= 5;
@@ -23,11 +23,14 @@ public class Pokemon {
         System.out.println(cp);
         return cp;
     }
-    void printCpValue(){
+
+    // 無回傳值的成員方法
+    void printCpValue() {
         System.out.println(cp);
         System.out.println(this.cp); // this.XXX代表是成員變數
     }
 
+    // 有回傳值的成員方法
     int evlove() {
         candy -= 20;
         cp += 50;
@@ -36,10 +39,9 @@ public class Pokemon {
         return level;
     }
 
+    // 有回傳值的成員方法
     int addCandy(int newCandy) {
         candy += newCandy;
         return candy;
     }
-
-
 }
