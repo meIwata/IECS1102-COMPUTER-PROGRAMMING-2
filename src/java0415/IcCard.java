@@ -44,6 +44,7 @@ public class IcCard {
 
     public void printInfo() { //()沒有放參數，且不需要回傳值
         System.out.println("卡號: " + number + " 餘額: " + balance);
-        return;
+        /*在 Java 中，void 方法代表「不需要回傳值」，所以可以寫 return;，但這是可選的。*/
+        // return; // 可以加，也可以不加
     }
 }
