@@ -20,11 +20,12 @@ public class Temperature {
 
     // 有回傳值的方法
     // 計算華氏，傳入攝氏做計算
-    float Fahrenheit(float Celsius){
+    float Fahrenheit(float Celsius) {
         return (float) (9.0 / 5 * Celsius) + 32;
     }
+
     // 計算攝氏，傳入華氏做計算
-    float Celsius(float Fahrenheit){
+    float Celsius(float Fahrenheit) {
         return (Fahrenheit - 32) * 5 / 9;
     }
 }
