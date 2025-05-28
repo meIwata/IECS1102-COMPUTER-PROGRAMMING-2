@@ -5,7 +5,7 @@ public class TestCar {
         Car toyota = new Car(); // 指的是Car(){}
 //        System.out.println(toyota.carNumber);
 //        System.out.println(toyota.doors);
-        System.out.println("輪胎: " + Car.wheels); // 不需要new出物件去存取wheels
+        System.out.println("輪胎: " + Car.WHEELS); // 不需要new出物件去存取wheels
 
         // 當輪胎wheels加上final為常數的意思，不可更變
 //        Car.wheels = 10;
@@ -31,6 +31,6 @@ public class TestCar {
         benz.setCarNumber("KKK-110");
         System.out.println("benz的車牌號碼: " + benz.getCarNumber());
         benz.setSeats(4);
-        System.out.println(benz.toString());
+        System.out.println(benz);
     }
 }

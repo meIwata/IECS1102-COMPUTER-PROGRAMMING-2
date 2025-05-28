@@ -4,7 +4,7 @@ public class Car {
     // 成員變數
 
     // static 靜態共享成員變數
-    public static final int wheels = 4; // 加上static綁定在類別上，使用類別名稱做存取
+    public static final int WHEELS = 4; // 加上static綁定在類別上，使用類別名稱做存取
 
     // 封裝成員變數
     private String carNumber; // 預設值: null
@@ -103,7 +103,8 @@ public class Car {
         this.seats = seats;
         recordInvocation("設定座椅");
     }
-    private  void recordInvocation(String action){
+
+    private void recordInvocation(String action) {
         System.out.println("現在的活動: " + action);
     }
 
