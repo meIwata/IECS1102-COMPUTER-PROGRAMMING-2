@@ -1,4 +1,4 @@
-package jave0515;
+package java0515;
 
 public class Bulbasaur extends Pokemon{
     public Bulbasaur(String name){

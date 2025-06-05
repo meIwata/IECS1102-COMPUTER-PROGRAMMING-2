@@ -1,4 +1,4 @@
-package jave0515;
+package java0515;
 
 import java.util.Random;
 
