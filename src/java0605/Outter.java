@@ -27,8 +27,9 @@ public class Outter {
     public static void main(String[] args) {
         Outter outter = new Outter("FCU");
         Outter.Inner inner = outter.new Inner();
-        inner.printOutterName();
 
+
+        inner.printOutterName();
         inner.updateName("Hi FCU");
         inner.printOutterName();
     }
