@@ -15,10 +15,16 @@ public class SetDemo3 {
         student.add("Linda");
         student.add("Alice");
         student.add("Bob");
+        System.out.println("容器大小: " + student.size());
+        student.add("Bob");
+        student.add("Bob");
+        System.out.println("容器大小: " + student.size());
+
+
 
         for (String s : student) {
             System.out.println(s);
         }
-        // 放進去的順序跟拿出來的順序不一樣，根據排序A~Z
+        // 相同的東西只放一次，放進去的順序跟拿出來的順序不一樣，根據排序A~Z
     }
 }
