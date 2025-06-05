@@ -3,7 +3,7 @@ package java0605;
 import java.util.HashSet;
 import java.util.Set;
 
-public class SetDemo {
+public class SetDemo1 {
     public static void main(String[] args) {
         // Set 是一個介面（interface），它定義了一組不允許重複元素的集合操作方法： HashSet、LinkedHashSet、TreeSet
         Set<String> student = new HashSet<String>();
