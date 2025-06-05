@@ -16,7 +16,6 @@ public class TestCalculator {
 
         //匿名類別
         Calculator calc1 = new Calculator() {
-
             @Override
             public int add(int a, int b) {
                 return a + b;
