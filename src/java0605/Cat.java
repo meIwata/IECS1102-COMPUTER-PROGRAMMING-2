@@ -6,6 +6,12 @@ interface Animal {
     void sleep();
 }
 
+class Toy {
+    public void pressButton(Animal animal) {
+        animal.makeSound();
+    }
+}
+
 public class Cat implements Animal {
 
     @Override
@@ -30,15 +36,33 @@ public class Cat implements Animal {
         Animal animal = new Animal() {
             @Override
             public void makeSound() {
-                System.out.println("Animal 匿名類別 的叫聲");
+                System.out.println("匿名類別1 的叫聲");
             }
 
             @Override
             public void sleep() {
-                System.out.println("Animal 匿名類別 在睡覺");
+                System.out.println("匿名類別2 在睡覺");
             }
         };
         animal.makeSound();
         animal.sleep();
+
+        //----------------------------------
+
+        Toy toy = new Toy();
+        // 傳入 Cat 物件，呼叫 pressButton，會呼叫 Cat 的 makeSound()
+        toy.pressButton(kitty); // 印出 "喵喵"
+        toy.pressButton(new Animal() {
+
+            @Override
+            public void makeSound() {
+                System.out.println("匿名類別2 的叫聲");
+            }
+
+            @Override
+            public void sleep() {
+                System.out.println("匿名類別2 在睡覺");
+            }
+        });
     }
 }
