@@ -25,14 +25,16 @@ public class TestCalculator {
         System.out.println(calc1.add(1, 2));
 
 
-        // lambda方法: 要實作的方法只有一個才能使用lambda
-//        Calculator calculator = (int x, int y) -> {
-//            return x + y;
-//        };
+        // lambda語法匿名類別: 要實作的方法只有一個才能使用lambda
+        Calculator calculator = (int x, int y) -> {
+            System.out.print("lambda語法匿名類別 ");
+            return x + y;
+        };
+        System.out.println(calculator.add(5, 6));
 
-        // lambda方法更簡潔寫法
-        Calculator calc2 = (int x, int y) -> x + y;
-        System.out.println(calc2.add(5, 6));
+        // lambda語法匿名類別更簡潔寫法
+//        Calculator calc2 = (int x, int y) -> x + y;
+//        System.out.println(calc2.add(5, 6));
 
 
         // 有名稱的類別
