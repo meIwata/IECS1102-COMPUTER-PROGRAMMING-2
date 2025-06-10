@@ -14,7 +14,7 @@ class MyCalculator implements Calculator {
 public class TestCalculator {
     public static void main(String[] args) {
 
-        //匿名類別
+        //匿名類別（Anonymous Class）可以用來實作介面
         Calculator calc1 = new Calculator() {
             @Override
             public int add(int a, int b) {
