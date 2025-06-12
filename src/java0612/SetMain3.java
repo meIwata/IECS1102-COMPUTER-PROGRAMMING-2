@@ -1,9 +1,13 @@
 package java0612;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
 
-public class SetMain2 {
+public class SetMain3 {
     public static void main(String[] args) {
+        // HW: 請從scanner不斷地輸入整數，直到使用者輸入"exit"，最後印出所有輸入整數加總的值
         Scanner sc = new Scanner(System.in);
         System.out.println("請輸入5個整數: ");
         List<Integer> numbers = new ArrayList<>();
