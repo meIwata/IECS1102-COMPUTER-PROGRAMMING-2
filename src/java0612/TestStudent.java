@@ -50,7 +50,6 @@ public class TestStudent {
         oopClass.add(mary);
         oopClass.add(john);
 
-
         // 請從oopClass找出學號為"S002"的學生，並印出他的姓名
         // 提示：用迴圈找出符合條件的學生條件，再印出學生姓名
         for (Student student : oopClass) {
