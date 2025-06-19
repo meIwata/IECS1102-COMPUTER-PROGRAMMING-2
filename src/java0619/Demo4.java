@@ -16,5 +16,9 @@ public class Demo4 {
         // ==：比較記憶體位置（參考位址）。
         System.out.println(s1.equals(s3)); // true
         System.out.println(s1.equals(s4)); // true
+
+        // 字串格式化（String Formatting）
+        String formattedString = String.format("Hello, %s. You are %d years old.", "John", 30);
+        System.out.println(formattedString);
     }
 }
