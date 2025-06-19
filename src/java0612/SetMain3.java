@@ -9,21 +9,19 @@ public class SetMain3 {
     public static void main(String[] args) {
         // HW: 請從scanner不斷地輸入整數，直到使用者輸入"exit"，最後印出所有輸入整數加總的值
         Scanner sc = new Scanner(System.in);
-        System.out.println("請輸入5個整數: ");
         List<Integer> numbers = new ArrayList<>();
+        System.out.println("請輸入整數，結束請輸入 exit：");
         try {
-            while (numbers.size() < 5) {
+            while (true) {
+                String input = sc.next();
+                if (input.equalsIgnoreCase("exit")) {
+                    break;
+                }
                 try {
-                    int num = sc.nextInt();
+                    int num = Integer.parseInt(input);
                     numbers.add(num);
-                } catch (InputMismatchException e) {
-                    /*提示輸入錯誤，重新讓使用者輸入*/
-                System.out.println("輸入錯誤，請重新輸入整數！");
-                sc.nextLine();
-
-                    /*提示輸入錯誤，直接做加總*/
-//                    System.out.println("格式輸入錯誤");
-//                    break;
+                } catch (NumberFormatException e) {
+                    System.out.println("輸入錯誤，請重新輸入整數！");
                 }
             }
             int sum = 0;
@@ -31,9 +29,9 @@ public class SetMain3 {
                 sum += num;
             }
             System.out.println("總和: " + sum);
-        } finally { // 無論如何都會執行
+        } finally {
             System.out.println("程式結束");
-            sc.close(); // 可以在這裡關閉 Scanner
+            sc.close();
         }
     }
 }
