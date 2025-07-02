@@ -23,6 +23,9 @@ public class BufferedReaderDemo5 {
                     String[] spilt = line.split("神");
                    System.out.println(line + ";" + spilt.length);
                    count += spilt.length - 1; // 每次出現 "神" 都會增加一次計數
+                   if(line.endsWith("神")){
+                       count++;
+                   }
                 }
             }
             System.out.println("字元 '神' 出現的次數: " + count);
