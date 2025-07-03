@@ -49,6 +49,7 @@ public class LyricAnalyzer5 {
         try (FileWriter fw = new FileWriter(fileName);
              BufferedWriter bw = new BufferedWriter(fw)) {
             bw.write(keyword + "共出現了" + counter + "次");
+            bw.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
