@@ -1,32 +1,33 @@
 package java0703;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class HotelFilter3 {
 
     public void generateHotelInCityFile(String sourcefileName, String city, String resultFileName) {
-        try {
-            FileReader fileReader = new FileReader(sourcefileName);
-            LineNumberReader lineReader = new LineNumberReader(fileReader);
+        try (
+                FileReader fileReader = new FileReader(sourcefileName);
+                LineNumberReader lineNumberReader = new LineNumberReader(fileReader);
 
-            FileWriter fileWriter = new FileWriter(resultFileName);
+                FileWriter fileWriter = new FileWriter(resultFileName);
+                )
+        {
 
-            String line = null;
+
             Map<String, Integer> hotelMap = new HashMap<>();
-            while ((line = lineReader.readLine()) != null) {
-                if (line.contains(city)) {
-                    String[] lineSpilt = line.split(",");
+            String line = null;
+            while ((line = lineNumberReader.readLine()) != null) {
+                String[] lineSpilt = line.split(",");
+                if (!line.isEmpty() && lineSpilt[6].equals(city)) {
                     if (lineSpilt[7].endsWith("區") || lineSpilt[7].endsWith("鄉") || lineSpilt[7].endsWith("鎮") || lineSpilt[7].endsWith("市")) {
                         String country = lineSpilt[7];
                         Integer hotelCount = hotelMap.get(country);
                         if (hotelCount == null) {
-                            hotelMap.put(country, 1); // key: "西區", value: 1
+                            hotelMap.put(country, 1);
                         } else {
-                            hotelMap.put(country, hotelCount + 1); // key: "西區", value: 2
+                            hotelMap.put(country, hotelCount + 1);
                         }
                     }
                 }
@@ -41,8 +42,10 @@ public class HotelFilter3 {
             fileWriter.flush();
 
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         } catch (IOException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
@@ -56,9 +59,7 @@ public class HotelFilter3 {
      */
     public static void main(String[] args) {
         HotelFilter3 hotelFilter = new HotelFilter3();
-        hotelFilter.generateHotelInCityFile("src/java0703/hotels.csv", "台北市", "src/java0703/taichung_hotels.csv");
+        hotelFilter.generateHotelInCityFile("src/java0703/hotels.csv", "臺北市", "src/java0703/hotel_result.csv");
     }
 
 }
-
-
