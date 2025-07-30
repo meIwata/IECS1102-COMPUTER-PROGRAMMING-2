@@ -56,3 +56,9 @@ INSERT INTO D1397221_0724.Enrollment values(2, 3, '2025-07-30')
 INSERT INTO D1397221_0724.Enrollment values(2, 2, '2025-07-30')
 INSERT INTO D1397221_0724.Enrollment values(3, 4, '2025-07-30')
 INSERT INTO D1397221_0724.Enrollment values(3, 1, '2025-07-30')
+
+-- 修改資料
+UPDATE D1397221_0724.Student SET email = 'brainchang@fcu.edu.tw' WHERE student_id = 5 -- 更改一欄
+UPDATE D1397221_0724.Student SET email = 'brainchang@o365.fcu.edu.tw', date_of_birth='00-08-16' WHERE student_id = 5 -- 更改多欄
+
+UPDATE D1397221_0724.Student SET email = "123@yahoo.com.tw" WHERE email LIKE '%@o365.fcu.edu.tw'
