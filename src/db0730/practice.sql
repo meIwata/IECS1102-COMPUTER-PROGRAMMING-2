@@ -62,3 +62,7 @@ UPDATE D1397221_0724.Student SET email = 'brainchang@fcu.edu.tw' WHERE student_i
 UPDATE D1397221_0724.Student SET email = 'brainchang@o365.fcu.edu.tw', date_of_birth='00-08-16' WHERE student_id = 5 -- 更改多欄
 
 UPDATE D1397221_0724.Student SET email = "123@yahoo.com.tw" WHERE email LIKE '%@o365.fcu.edu.tw'
+
+UPDATE D1397221_0724.Course SET course_description = "要帶統計計算機", course_name = "Statistics" WHERE course_id = 2
+UPDATE D1397221_0724.Course SET credits = 2 WHERE course_id = 1
+UPDATE D1397221_0724.Course SET credits = 1 WHERE course_id = 3
