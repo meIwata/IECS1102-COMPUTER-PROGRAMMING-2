@@ -66,3 +66,17 @@ UPDATE D1397221_0724.Student SET email = "123@yahoo.com.tw" WHERE email LIKE '%@
 UPDATE D1397221_0724.Course SET course_description = "要帶統計計算機", course_name = "Statistics" WHERE course_id = 2
 UPDATE D1397221_0724.Course SET credits = 2 WHERE course_id = 1
 UPDATE D1397221_0724.Course SET credits = 1 WHERE course_id = 3
+
+-- 刪除資料
+DELETE FROM D1397221_0724.Student WHERE student_id = 5
+
+
+-- 再新增一點資料
+INSERT INTO D1397221_0724.Student VALUES (null, 'Kent', 'Chen', '2001-03-08', 'kentchen@hotmail.com')
+INSERT INTO D1397221_0724.Student VALUES (null, 'Kent', 'Wang', '1999-07-21', 'kentwang@hotmail.com')
+INSERT INTO D1397221_0724.Student VALUES (null, 'Kent', 'Lee', '2002-11-15', 'kent.lee@gmail.com')
+INSERT INTO D1397221_0724.Student VALUES (null, 'David', 'Hsu', '2000-02-27', 'davidhsu@gmail.com')
+INSERT INTO D1397221_0724.Student VALUES (null, 'Mandy', 'Lin', '2003-09-30', 'mandy.lin@gmail.com')
+
+
+DELETE FROM D1397221_0724.Student WHERE first_name = 'Kent' AND email LIKE '%@hotmail%'; -- 刪除名字是Kent且email包含@hotmail
