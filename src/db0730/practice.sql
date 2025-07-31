@@ -80,3 +80,23 @@ INSERT INTO D1397221_0724.Student VALUES (null, 'Mandy', 'Lin', '2003-09-30', 'm
 
 
 DELETE FROM D1397221_0724.Student WHERE first_name = 'Kent' AND email LIKE '%@hotmail%'; -- 刪除名字是Kent且email包含@hotmail
+
+-- 2025.07.31
+-- 查詢表格資料
+SELECT * from D1397221_0724.Student s
+
+SELECT * from D1397221_0724.Student s ORDER BY email
+SELECT email, first_name   from D1397221_0724.Student s
+
+SELECT * from D1397221_HW.OrderDetails od;
+SELECT departure from D1397221_HW.OrderDetails od;
+
+SELECT DISTINCT first_name FROM D1397221_0724.Student s; -- 使用 DISTINCT， 如果first_name一樣就只會出現一筆
+
+SELECT email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s;
+
+SELECT email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s WHERE s.student_id =10
+
+SELECT s.date_of_birth AS 生日, email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s WHERE s.date_of_birth < '2001-01-01';
+
+SELECT email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s WHERE s.first_name <> 'Tom' -- <>是不等於
