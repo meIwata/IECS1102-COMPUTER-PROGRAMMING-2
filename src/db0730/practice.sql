@@ -85,8 +85,8 @@ DELETE FROM D1397221_0724.Student WHERE first_name = 'Kent' AND email LIKE '%@ho
 -- 查詢表格資料
 SELECT * from D1397221_0724.Student s
 
-SELECT * from D1397221_0724.Student s ORDER BY email
-SELECT email, first_name   from D1397221_0724.Student s
+SELECT * from D1397221_0724.Student s ORDER BY email;
+SELECT email, first_name   from D1397221_0724.Student s;
 
 SELECT * from D1397221_HW.OrderDetails od;
 SELECT departure from D1397221_HW.OrderDetails od;
@@ -95,7 +95,7 @@ SELECT DISTINCT first_name FROM D1397221_0724.Student s; -- 使用 DISTINCT， �
 
 SELECT email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s;
 
-SELECT email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s WHERE s.student_id =10
+SELECT email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s WHERE s.student_id =10;
 
 SELECT s.date_of_birth AS 生日, email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s WHERE s.date_of_birth < '2001-01-01';
 
@@ -104,3 +104,32 @@ SELECT email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397
 SELECT email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s WHERE s.first_name = 'Tom'; -- =是等於
 
 SELECT * from D1397221_0724.Student WHERE date_of_birth > '2002-01-01';
+
+SELECT * FROM D1397221_0724.Student s WHERE s.last_name like '%g';
+SELECT * FROM D1397221_0724.Student s WHERE s.first_name like 'K%';
+SELECT * FROM D1397221_0724.Student s WHERE s.first_name like '%n%';
+
+SELECT * from D1397221_0724.Course WHERE course_description is NULL; -- 找出欄位資料是空值的
+
+-- 子查詢
+SELECT * FROM D1397221_HW.Tickets t WHERE EXISTS (
+    SELECT passenger_name FROM D1397221_HW.Baggages b
+    WHERE b.tickets_id = t.tickets_id
+);
+
+SELECT * FROM T04012_0724.Teacher WHERE EXISTS (
+    SELECT teacher from T04012_0724.Course
+    WHERE T04012_0724.Teacher.teacher_id = T04012_0724.Course.teacher
+);
+
+
+SELECT teacher_id as 教職員編號, name as 教師姓名, email as 電子郵件, age as 年紀 from T04012_0724.Teacher WHERE age  between 30 and 40;
+SELECT teacher_id as 教職員編號, name as 教師姓名, email as 電子郵件, age as 年紀 from T04012_0724.Teacher WHERE age  in (20, 25, 30);
+SELECT teacher_id as 教職員編號, name as 教師姓名, email as 電子郵件, age as 年紀 from T04012_0724.Teacher WHERE age  not in (20, 25, 30);
+SELECT teacher_id as 教職員編號, name as 教師姓名, email as 電子郵件, age as 年紀 from T04012_0724.Teacher WHERE name like '%y' or age < 30;
+SELECT teacher_id as 教職員編號, name as 教師姓名, email as 電子郵件, age as 年紀 from T04012_0724.Teacher WHERE name like '%y' and age < 30;
+SELECT count(*) from T04012_0724.Teacher; -- 找到幾筆資料
+SELECT avg(age) from T04012_0724.Teacher; -- 算年紀的平均
+SELECT max(age) from T04012_0724.Teacher; -- 查詢 Teacher 表中最大的年齡
+SELECT min(age) from T04012_0724.Teacher; -- 查詢 Teacher 表中最小的年齡
+SELECT sum(age) from T04012_0724.Teacher; -- 計算 Teacher 表中所有年齡的總和
