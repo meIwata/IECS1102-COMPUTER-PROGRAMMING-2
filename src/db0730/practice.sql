@@ -100,3 +100,7 @@ SELECT email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397
 SELECT s.date_of_birth AS 生日, email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s WHERE s.date_of_birth < '2001-01-01';
 
 SELECT email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s WHERE s.first_name <> 'Tom' -- <>是不等於
+
+SELECT email AS 電子信箱, s.last_name AS 姓 ,s.first_name AS 名 FROM D1397221_0724.Student s WHERE s.first_name = 'Tom'; -- =是等於
+
+SELECT * from D1397221_0724.Student WHERE date_of_birth > '2002-01-01';
