@@ -30,7 +30,6 @@ public class LeapYear {
                 System.out.println("請輸入有效的年分或輸入exit結束程式");
             }
         }
-
     }
 
     public static void main(String[] args) {
