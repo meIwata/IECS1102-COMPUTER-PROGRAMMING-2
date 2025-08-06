@@ -240,3 +240,8 @@ UNION
 SELECT tickets_id AS id, passenger_name AS description
 FROM D1397221_HW.Tickets t;
 
+-- 寫出航班的出發地、目的地、起飛時間、抵達時間、乘客名字
+SELECT o.order_id, od.departure, od.departure_time , od.arrival, od.arrival_time, t.passenger_name
+FROM D1397221_HW.Orders o, D1397221_HW.OrderDetails od, D1397221_HW.Tickets t
+WHERE o.order_id = od.order_id AND t.order_id = o.order_id
+
