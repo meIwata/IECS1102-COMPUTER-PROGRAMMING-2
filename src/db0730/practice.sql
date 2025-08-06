@@ -140,3 +140,19 @@ select age, count(teacher_id) from T04012_0724.Teacher; -- 查詢每個年齡的
 select age, count(teacher_id) from T04012_0724.Teacher group by age; -- 查詢每個年齡（age）對應的教師人數（teacher_id 數量）
 select age, count(teacher_id) from T04012_0724.Teacher group by age having count(teacher_id) >=2; -- 查詢每個年齡的教師人數，只顯示教師人數大於等於2的年齡組
 select age, count(*) as amount from T04012_0724.Teacher group by age having count(teacher_id) >=2; -- 查詢每個年齡的教師人數（欄位別名為amount），只顯示教師人數大於等於2的年齡組
+
+-- CROSS JOIN（笛卡兒積）
+SELECT Teacher.*, Course.* from T04012_0724.Teacher CROSS JOIN T04012_0724.Course
+WHERE Teacher.teacher_id = T04012_0724.Course.teacher
+
+SELECT c.*, t.* from T04012_0724.Teacher t CROSS JOIN T04012_0724.Course c
+WHERE t.teacher_id = T04012_0724.c.teacher
+
+
+SELECT Teacher.teacher_id, Teacher.name, course_id from T04012_0724.Teacher
+    CROSS JOIN T04012_0724.Course
+    where Teacher.teacher_id = T04012_0724.Course.teacher;
+
+-- INNER JOIN 方法
+SELECT Teacher.teacher_id, Teacher.name, course_id
+from T04012_0724.Teacher inner join T04012_0724.Course on Teacher.teacher_id = T04012_0724.Course.teacher;
