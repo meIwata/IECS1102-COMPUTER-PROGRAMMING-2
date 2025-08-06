@@ -158,6 +158,8 @@ SELECT Teacher.teacher_id, Teacher.name, course_id from T04012_0724.Teacher
     CROSS JOIN T04012_0724.Course
     where Teacher.teacher_id = T04012_0724.Course.teacher;
 
+SELECT s.* from T04012_0724.Student s
+    CROSS Join T04012_0724.Enrollment e where s.student_id = e.student_id
 
 
 -- INNER JOIN 方法
@@ -166,3 +168,22 @@ SELECT Teacher.teacher_id, Teacher.name, course_id from T04012_0724.Teacher
 -- 只顯示教師編號（teacher_id）與課程的授課教師（teacher）相同的資料
 SELECT Teacher.teacher_id, Teacher.name, course_id
 from T04012_0724.Teacher inner join T04012_0724.Course on Teacher.teacher_id = T04012_0724.Course.teacher;
+
+
+
+-- θ合併查詢，θ-join 指的是在 SQL 查詢中，使用任意比較運算子（如 =, <, >, <=, >=, <>）來連接兩個或多個表，這裡的 θ（theta）代表「條件」。
+SELECT c.course_id, c.course_name, s.student_id, s.first_name, s.last_name
+FROM T04012_0724.Enrollment e , T04012_0724.Course c , T04012_0724.Student s
+Where e.course_id = c.course_id AND e.student_id = s.student_id
+
+
+-- 把老師的資訊加到欄位裡
+-- 查詢每門課程的課程編號（course_id）、課程名稱（course_name）、學生學號（student_id）、學生姓名（first_name, last_name）、教師編號（teacher_id）及教師姓名（name）
+-- 從 Enrollment（選課）、Course（課程）、Student（學生）、Teacher（教師）四個資料表進行多表連接
+-- 連接條件：
+--   1. Enrollment 表的 course_id 與 Course 表的 course_id 相同（學生選的課程）
+--   2. Enrollment 表的 student_id 與 Student 表的 student_id 相同（選課學生的資料）
+--   3. Course 表的 teacher 與 Teacher 表的 teacher_id 相同（課程的授課教師）
+SELECT c.course_id, c.course_name, s.student_id, s.first_name, s.last_name, t.teacher_id, t.name
+FROM T04012_0724.Enrollment e , T04012_0724.Course c , T04012_0724.Student s, T04012_0724.Teacher t
+Where e.course_id = c.course_id AND e.student_id = s.student_id AND c.teacher = t.teacher_id
