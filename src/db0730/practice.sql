@@ -184,6 +184,59 @@ Where e.course_id = c.course_id AND e.student_id = s.student_id
 --   1. Enrollment 表的 course_id 與 Course 表的 course_id 相同（學生選的課程）
 --   2. Enrollment 表的 student_id 與 Student 表的 student_id 相同（選課學生的資料）
 --   3. Course 表的 teacher 與 Teacher 表的 teacher_id 相同（課程的授課教師）
+-- ，老師建議用where來做
 SELECT c.course_id, c.course_name, s.student_id, s.first_name, s.last_name, t.teacher_id, t.name
 FROM T04012_0724.Enrollment e , T04012_0724.Course c , T04012_0724.Student s, T04012_0724.Teacher t
 Where e.course_id = c.course_id AND e.student_id = s.student_id AND c.teacher = t.teacher_id
+
+-- 一樣可以用INNER JOIN 方法
+SELECT c.course_id, c.course_name, s.student_id, s.first_name, s.last_name, t.teacher_id, t.name
+FROM T04012_0724.Enrollment e
+         INNER JOIN T04012_0724.Course c ON e.course_id = c.course_id
+         INNER JOIN T04012_0724.Student s ON e.student_id = s.student_id
+         INNER JOIN T04012_0724.Teacher t ON c.teacher = t.teacher_id
+
+
+
+-- INNER JOIN 方法
+SELECT c.course_id, c.course_name, t.teacher_id, t.name
+FROM T04012_0724.Course c INNER JOIN T04012_0724.Teacher t ON  c.teacher = t.teacher_id
+
+-- 早期 SQL 常見的寫法，也叫「隱式連接」
+SELECT c.course_id, c.course_name, t.teacher_id, t.name
+FROM T04012_0724.Course c ,T04012_0724.Teacher t
+Where  c.teacher = t.teacher_id
+
+
+-- LEFT JOIN 方法
+SELECT t.*, c.*
+FROM T04012_0724.Teacher t  LEFT JOIN T04012_0724.Course c  -- 以Teacher表格為主放左邊，Course併上來
+ON t.teacher_id = c.teacher
+
+SELECT t.*, c.*
+FROM T04012_0724.Course c LEFT JOIN T04012_0724.Teacher t  -- 以Course表格為主放左邊，Teacher併上來
+ON t.teacher_id = c.teacher
+
+
+-- RIGHT JOIN 方法
+SELECT t.*, c.*
+FROM T04012_0724.Teacher t  RIGHT JOIN T04012_0724.Course c
+ON t.teacher_id = c.teacher
+
+SELECT t.*, c.*
+FROM T04012_0724.Course c RIGHT JOIN T04012_0724.Teacher t
+ON t.teacher_id = c.teacher
+
+-- UNION 連集
+SELECT t.teacher_id FROM T04012_0724.Teacher t
+UNION
+SELECT c.teacher FROM T04012_0724.Course c
+
+
+
+SELECT customer_id AS id, name AS description
+FROM D1397221_HW.Customers c
+UNION
+SELECT tickets_id AS id, passenger_name AS description
+FROM D1397221_HW.Tickets t;
+
