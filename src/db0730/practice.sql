@@ -133,3 +133,10 @@ SELECT avg(age) from T04012_0724.Teacher; -- 算年紀的平均
 SELECT max(age) from T04012_0724.Teacher; -- 查詢 Teacher 表中最大的年齡
 SELECT min(age) from T04012_0724.Teacher; -- 查詢 Teacher 表中最小的年齡
 SELECT sum(age) from T04012_0724.Teacher; -- 計算 Teacher 表中所有年齡的總和
+
+
+-- 2025.08.06
+select age, count(teacher_id) from T04012_0724.Teacher; -- 查詢每個年齡的教師人數（不分組篩選，顯示所有資料）
+select age, count(teacher_id) from T04012_0724.Teacher group by age; -- 查詢每個年齡（age）對應的教師人數（teacher_id 數量）
+select age, count(teacher_id) from T04012_0724.Teacher group by age having count(teacher_id) >=2; -- 查詢每個年齡的教師人數，只顯示教師人數大於等於2的年齡組
+select age, count(*) as amount from T04012_0724.Teacher group by age having count(teacher_id) >=2; -- 查詢每個年齡的教師人數（欄位別名為amount），只顯示教師人數大於等於2的年齡組
